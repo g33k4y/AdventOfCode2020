@@ -3,7 +3,7 @@
 print("Looking for two values that add up to 2020 in specified text file...\n")
 
 #reading lines in textfile
-with open('input1.txt') as f:
+with open('input.txt') as f:
     lines = f.readlines()
 
 for x in lines:
