@@ -51,7 +51,7 @@ Run the python scrip _main1.py_ to get the solution given the input file _input.
 > 
 > How many passwords are valid according to the new interpretation of the policies?  
 > 
-> Answer: ****
+> Answer: **391**
 > 
 > Although it hasn't changed, you can still [get your puzzle input](https://adventofcode.com/2020/day/2/input).
 
