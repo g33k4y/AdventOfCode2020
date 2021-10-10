@@ -34,6 +34,7 @@
 
 Run the python scrip _main1.py_ to get the solution given the input file _input.txt:  
 `python3 main1.py`  
+
 ![](./res/two_values.png)
 
 ---  
@@ -56,4 +57,5 @@ Run the python scrip _main1.py_ to get the solution given the input file _input.
 
 Run the python scrip _main2.py_ to get the solution given the input file _input.txt:  
 `python3 main2.py`  
+
 ![](./res/three_values.png)
