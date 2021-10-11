@@ -47,9 +47,9 @@ Run the python scrip _main1.py_ to get the solution given the input file _input.
 > 
 > - Right 1, down 1.  
 > - Right 3, down 1. (This is the slope you already checked.)  
-> - RightRight 5, down 1.  
-> - RightRight 7, down 1.  
-> - RightRight 1, down 2.  
+> - Right 5, down 1.  
+> - Right 7, down 1.  
+> - Right 1, down 2.  
 > 
 > In the above example, these slopes would find 2, 7, 3, 4, and 2 tree(s) respectively; multiplied together, these produce the answer 336.  
 > 
