@@ -1,31 +1,28 @@
 with open('input.txt') as f:
     lines=f.readlines()
 
-preamble_range=25                                   #to state how many values as preamble
-preambles=[]                                        #preambles listing
 for i in range(0,len(lines)):
     lines[i]=int(lines[i].strip())
-    if i < preamble_range:
-        preambles.append(lines[i])
 
-xmas_value=0                                        #the first xmas value without the right property
+adapters=lines.copy()
+adapters.append(0)
+adapters.sort()
+diff_one=0                                      #to count 1-jolt differences
+diff_two=0                                      #to count 2-jolt differences
+diff_three=1                                    #to count 3-jolt differences. device has a built-in adapter rated 3 jolts higher than highest-rated adapter
+                                                
 
-def searchProperty(list, value):
-    for x in list:
-        for y in list:
-            if (x == y):
-                continue
-            elif (value == (x+y)):
-                return True
-    return False
 
-for a in range(preamble_range,len(lines)):
-    if (searchProperty(preambles,lines[a])):        
-        preambles.pop(0)                            #if value is valid, add into preambles list
-        preambles.append(lines[a])                  #and pop the first value off the list
-    else:
-        xmas_value=lines[a]
-        print("List of preamble values: {}".format(preambles))
-        exit("First XMAS Value without the right property: {}".format(xmas_value))
+for x in range(1,len(adapters)):
+    if (adapters[x]-adapters[x-1]==0):
+        continue
+    elif (adapters[x]-adapters[x-1]==1):
+        diff_one+=1
+    elif (adapters[x]-adapters[x-1]==2):
+        diff_two+=1
+    elif (adapters[x]-adapters[x-1]==3):
+        diff_three+=1
+  
+        
 
-exit("No solution found")
+exit("1-jolt diff * 3-jolt diff = {}".format(diff_three*diff_one))
